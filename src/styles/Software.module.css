@@ -1,0 +1,104 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  background-color: #0f172a;
+  color: #e5e7eb;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;  
+  align-items: center;     
+}
+
+/* Layout */
+.content {
+  max-width: 900px;
+  padding: 6rem 3rem;
+  text-align: center;
+}
+
+/* Headline */
+.content h1 {
+  font-size: clamp(2.75rem, 5vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+}
+
+.content h2 {
+  font-size: clamp(1.9rem, 4vw, 2.95rem)
+}
+
+/* Supporting text */
+.subtitle {
+  font-size: 1.15rem;
+  color: #cbd5f5;
+  max-width: 620px;
+  margin: 0 auto 1.5rem auto;
+}
+
+
+/* Tech stack preview */
+.stack-preview {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  letter-spacing: 0.06em;
+}
+
+.rainbow {
+  background: linear-gradient(
+    270deg,
+    #ff0000,
+    #ff7f00,
+    #ffff00,
+    #00ff00,
+    #0000ff,
+    #4b0082,
+    #8b00ff
+  );
+  background-size: 400% 400%;
+  font-weight: 1000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: rainbowShift 6s ease infinite;
+}
+
+@keyframes rainbowShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* Small screens */
+@media (max-width: 768px) {
+  .content {
+    padding: 4rem 1.5rem;
+  }
+
+  .content h1 {
+    font-size: 2.3rem;
+  }
+
+  .content h2 {
+    font-size: 1.9rem;
+  }
+
+  .subtitle {
+    font-size: 1.05rem;
+  }
+}
