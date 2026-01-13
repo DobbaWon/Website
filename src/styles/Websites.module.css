@@ -1,0 +1,143 @@
+.page {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 5rem 2rem;
+  color: #e5e7eb;
+  background-color: hsl(229, 91%, 9%);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: clamp(2rem, 8vw, 4rem);
+  font-weight: 800;
+}
+
+.subtitle {
+  margin-top: 1rem;
+  font-size: clamp(0.9rem, 3vw, 1rem);
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* MIDDLE SECTION: Projects + Tech Stack */
+.middleSection {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+/* Projects (grid) */
+.projectsWrapper {
+  flex: 1 1 70%;
+}
+
+.projectsWrapper h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Make the project cards appear in rows of 2 and wrap */
+.projectsWrapper > * {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+/* Tech Stack */
+.techWrapper {
+  flex: 0 1 25%;
+  min-width: 150px;
+}
+
+.techWrapper h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.techList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+}
+
+.techList li {
+  background: #020617;
+  border: 1px solid #1e293b;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+/* CONTACT */
+.contactSection {
+  margin: 4rem 0 2rem;
+  text-align: center;
+}
+
+.contactSection a {
+  color: #38bdf8;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.contactSection a:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
+}
+
+/* BACK BUTTON */
+.button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+/* MOBILE */
+@media (max-width: 1024px) {
+  .middleSection {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .techWrapper {
+    flex: 1 1 100%;
+  }
+
+  .projectsWrapper {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 3rem 1rem;
+  }
+
+  .projectsWrapper h2,
+  .techWrapper h2 {
+    font-size: 1.4rem;
+  }
+
+  .techList li {
+    font-size: 0.85rem;
+  }
+}

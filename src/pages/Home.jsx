@@ -16,7 +16,7 @@ export default function Home() {
       <section className={styles.options}>
         <OptionCard
           title="DJing"
-          description="Clubs, collectives, and events. Explore my sound, past venues, and mixes."
+          description="Clubs, collectives, and events. Explore my sound and mixes."
           image={DjImage}
           to="/dj"
         />

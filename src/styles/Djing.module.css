@@ -1,0 +1,171 @@
+.page {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  color: #e5e7eb;
+  background-color: hsl(229, 91%, 9%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.name {
+  font-size: clamp(2rem, 8vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.tagline {
+  margin-top: 1rem;
+  color: #38bdf8;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.location {
+  margin-top: 0.5rem;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+/* SECTIONS */
+.section {
+  width: 100%;
+  max-width: 750px;
+  margin-bottom: 3rem;
+}
+
+.section h2 {
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
+  margin-bottom: 1.25rem;
+}
+
+/* PLAYER */
+.player {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #1e293b;
+  background: #020617;
+}
+
+.player iframe {
+  width: 100%;
+  height: 166px;
+  display: block;
+  border: none;
+}
+
+/* VENUES */
+.venues {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.venues li {
+  padding: 0.75rem 1rem;
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+}
+
+/* SOUND */
+.sound {
+  color: #cbd5f5;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.photo {
+  height: 180px;
+  background: #020617;
+  border-radius: 14px;
+  border: 1px solid #1e293b;
+}
+
+/* CONTACT */
+.contactSection {
+  margin: 4rem 0 2rem;
+  text-align: center;
+}
+
+.contact {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.contact a {
+  color: #38bdf8;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
+}
+
+/* BACK BUTTON */
+.backButton {
+  display: inline-block;
+  margin-top: 3rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.95rem;
+  color: #38bdf8;
+  background: inherit;
+  border: 1px solid #38bdf8;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.backButton:hover {
+  background: rgba(56, 189, 248, 0.15);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .page {
+    padding: 3rem 1rem;
+  }
+
+  .section {
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+  }
+
+  .player iframe {
+    height: 140px;
+  }
+
+  .photo {
+    height: 140px;
+  }
+
+  .name {
+    font-size: clamp(1.8rem, 10vw, 3rem);
+  }
+
+  .section h2 {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+  }
+}
