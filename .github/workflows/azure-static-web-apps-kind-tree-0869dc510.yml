@@ -46,7 +46,7 @@ jobs:
           action: "upload"
           app_location: "/"           # Your app root folder
           api_location: ""            # Leave empty if no API
-          output_location: "build"    # Must match Vite build folder
+          output_location: "dist"    # Must match Vite build folder
           #### Optional: GitHub OIDC token for authentication
           github_id_token: ${{ steps.builddeploy.outputs.github_id_token || '' }}
 
