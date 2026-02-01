@@ -58,7 +58,6 @@ export default function Websites() {
           </div>
         </div>
 
-
         {/* Tech stack on the right */}
         <div className={styles.techWrapper}>
           <h2>Tech Stack</h2>
@@ -68,6 +67,20 @@ export default function Websites() {
             ))}
           </ul>
         </div>
+      </section>
+
+      {/* HOW IT WORKS / ONBOARDING */}
+      <section className={styles.onboardingSection}>
+        <h2>How Getting a Website With Me Works</h2>
+        <p>
+          When you start a project with me, I provide an example template of your website so you can see the structure and layout. I’ll need you to supply images, mission statements, and other written content to replace the placeholder material in the template.
+        </p>
+        <p>
+          Once your site is live, I offer <strong>basic revisions for free once a month</strong>—for example, updating text in an existing paragraph. Larger changes, such as adding new sections, pages, or features, will be quoted and charged based on the scope of work.
+        </p>
+        <p>
+          This approach ensures your website stays current and flexible while keeping costs transparent.
+        </p>
       </section>
 
       {/* CONTACT */}
