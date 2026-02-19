@@ -16,6 +16,15 @@ export default function DJing() {
       {/* LISTEN */}
       <section className={styles.section}>
         <h2>Listen</h2>
+        
+        <div className={styles.player}>
+          <iframe
+            width="100%"
+            height="166"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https://soundcloud.com/user-213830597/2026-bar-garage-mix"
+          />
+        </div>      
 
         <div className={styles.player}>
           <iframe
@@ -25,15 +34,6 @@ export default function DJing() {
             src="https://w.soundcloud.com/player/?url=https://soundcloud.com/user-213830597/9e2de280-dc0a-4f0c-a29e-8426b4ba6a04"
           />
         </div>
-
-        <div className={styles.player}>
-          <iframe
-            width="100%"
-            height="166"
-            allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https://soundcloud.com/user-213830597/2026-bar-garage-mix"
-          />
-        </div>      
 
         <div className={styles.player}>
           <iframe
