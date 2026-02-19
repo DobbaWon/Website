@@ -31,7 +31,7 @@ export default function DJing() {
             width="100%"
             height="166"
             allow="autoplay"
-            src="https://soundcloud.com/user-213830597/2026-bar-garage-mix"
+            src="https://w.soundcloud.com/player/?url=https://soundcloud.com/user-213830597/2026-bar-garage-mix"
           />
         </div>      
 
