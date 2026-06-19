@@ -1,16 +1,24 @@
 .backButton {
-  margin-bottom: 3rem;
-  padding: 0.5rem 1.25rem;
-  font-size: 0.95rem;
-  color: #38bdf8;
-  background: transparent;   /* lets the parent show through */
-  border: 1px solid #38bdf8;
-  border-radius: 8px;
+  margin-bottom: 2rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  color: var(--paper);
+  background: transparent;
+  border: 1px solid var(--ink-700);
+  border-radius: 999px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
 }
 
 .backButton:hover {
-  background: rgba(56, 189, 248, 0.15); /* subtle hover highlight */
-  color: #38bdf8;
+  border-color: var(--brass);
+  color: var(--brass-bright);
+  transform: translateY(-1px);
+}
+
+.backButton:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 2px;
 }

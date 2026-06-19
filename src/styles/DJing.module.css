@@ -1,62 +1,101 @@
 .page {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
-  margin: 0;
-  color: #e5e7eb;
-  background-color: hsl(229, 91%, 9%);
+  background-color: var(--ink-950);
+  color: var(--paper);
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-sizing: border-box;
+  padding: 6rem 2rem 4rem;
 }
 
 /* HERO */
 .hero {
+  width: 100%;
+  max-width: 720px;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin-bottom: 1.25rem;
+}
+
+/* .eyebrow::before {
+  content: "";
+  width: 1.1rem;
+  height: 1px;
+  background: var(--brass);
+} */
+
 .name {
-  font-size: clamp(2rem, 8vw, 4rem);
-  font-weight: 800;
-  line-height: 1.1;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(2.4rem, 7vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.05;
+  margin: 0;
+  color: var(--paper);
 }
 
 .tagline {
   margin-top: 1rem;
-  color: #38bdf8;
-  letter-spacing: 0.15em;
+  color: var(--brass);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 .location {
   margin-top: 0.5rem;
-  color: #94a3b8;
-  font-size: 0.85rem;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 /* SECTIONS */
 .section {
   width: 100%;
   max-width: 750px;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
-.section h2 {
-  font-size: clamp(1.4rem, 4vw, 1.8rem);
-  margin-bottom: 1.25rem;
+.sectionHeader {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.sectionHeader h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  margin: 0;
+  color: var(--paper);
 }
 
 /* PLAYER */
 .player {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   width: 100%;
-  max-width: 100%;
-  border-radius: 14px;
+  border-radius: 12px;
   overflow: hidden;
-  border: 1px solid #1e293b;
-  background: #020617;
+  border: 1px solid var(--ink-800);
+  background: var(--ink-900);
 }
 
 .player iframe {
@@ -66,106 +105,50 @@
   border: none;
 }
 
-/* VENUES */
-.venues {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  gap: 0.75rem;
-}
-
-.venues li {
-  padding: 0.75rem 1rem;
-  background: #020617;
-  border: 1px solid #1e293b;
-  border-radius: 10px;
-}
-
 /* SOUND */
 .sound {
-  color: #cbd5f5;
+  color: var(--muted);
   line-height: 1.6;
   font-size: 0.95rem;
 }
 
-/* GALLERY */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-}
-
-.photo {
-  height: 180px;
-  background: #020617;
-  border-radius: 14px;
-  border: 1px solid #1e293b;
-}
-
 /* CONTACT */
 .contactSection {
-  margin: 4rem 0 2rem;
+  width: 100%;
+  max-width: 560px;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
-.contact {
-  margin-bottom: 0.75rem;
-  font-size: 1rem;
+.contactSection p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
-.contact a {
-  color: #38bdf8;
-  font-weight: 500;
+.contactLink {
+  color: var(--brass);
+  font-weight: 600;
   text-decoration: none;
+  transition: color 0.15s ease;
 }
 
-.contact a:hover {
-  text-decoration: underline;
-  text-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
+.contactLink:hover {
+  color: var(--brass-bright);
 }
 
 /* BACK BUTTON */
-.backButton {
-  display: inline-block;
-  margin-top: 3rem;
-  padding: 0.5rem 1.25rem;
-  font-size: 0.95rem;
-  color: #38bdf8;
-  background: inherit;
-  border: 1px solid #38bdf8;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.backButton:hover {
-  background: rgba(56, 189, 248, 0.15);
+.button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
-  .page {
-    padding: 3rem 1rem;
-  }
-
-  .section {
-    margin-bottom: 3rem;
-    padding: 0 1rem;
-  }
-
-  .player iframe {
-    height: 140px;
-  }
-
-  .photo {
-    height: 140px;
-  }
-
-  .name {
-    font-size: clamp(1.8rem, 10vw, 3rem);
-  }
-
-  .section h2 {
-    font-size: clamp(1.2rem, 5vw, 1.6rem);
-  }
+  .page { padding: 4rem 1.25rem 3rem; }
+  .hero { margin-bottom: 3.5rem; }
+  .section { margin-bottom: 3rem; }
+  .player iframe { height: 140px; }
 }

@@ -8,6 +8,7 @@ export default function Home() {
   return (
     <main className={styles.home}>
       <header className={styles.header}>
+        <span className={styles.eyebrow}>Portfolio</span>
         <h1>Hi, I'm Charlie!</h1>
         <h2>What are you here for?</h2>
         <p>Select a path to explore my work</p>
@@ -20,14 +21,12 @@ export default function Home() {
           image={DjImage}
           to="/dj"
         />
-
         <OptionCard
           title="Websites"
           description="Freelance websites for businesses and individuals. View my portfolio and get in touch."
           image={WebsitesImage}
           to="/websites"
         />
-
         <OptionCard
           title="Software Development"
           description="My career as a full-stack developer. Experience, projects, and tech stacks."

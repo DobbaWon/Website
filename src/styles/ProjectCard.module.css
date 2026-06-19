@@ -1,19 +1,26 @@
 .card {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   border-radius: 12px;
   overflow: hidden;
-  background-color: #020617;
-  border: 1px solid #1e293b;
+  background-color: var(--ink-900, #0e1730);
+  border: 1px solid var(--ink-800, #1a2540);
   text-decoration: none;
-  color: #e5e7eb;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  margin: 2rem 0;
-  max-width: 500px;
+  color: var(--paper, #ece7da);
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+  border-color: var(--brass, #c9a35c);
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--brass, #c9a35c);
+  outline-offset: 2px;
 }
 
 .imageWrapper {
@@ -28,7 +35,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.25s ease;
+  transition: transform 0.4s ease;
 }
 
 .card:hover .image {
@@ -41,23 +48,47 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
+  background: linear-gradient(to top, rgba(6, 11, 31, 0.5), transparent);
 }
 
 .info {
-  padding: 1rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .title {
+  font-family: "Fraunces", Georgia, serif;
   font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: var(--paper, #ece7da);
 }
 
 .description {
   font-size: 0.95rem;
-  color: #94a3b8;
-  line-height: 1.4;
+  color: var(--muted, #8d97ad);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.linkLabel {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--brass, #c9a35c);
+}
+
+.card:hover .linkLabel {
+  color: var(--brass-bright, #e7c989);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .image {
+    transition: none;
+  }
 }
 
 /* MOBILE */

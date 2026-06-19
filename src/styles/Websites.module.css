@@ -1,106 +1,247 @@
+/* Websites.module.css */
+
+
 .page {
-  width: 100vw;
+  --ink-950: #060b1f;
+  --ink-900: #0e1730;
+  --ink-800: #1a2540;
+  --ink-700: #2c3a5e;
+  --paper: #ece7da;
+  --muted: #8d97ad;
+  --brass: #c9a35c;
+  --brass-bright: #e7c989;
+
+  width: 100%;
   min-height: 100vh;
   margin: 0;
-  padding: 5rem 2rem;
-  color: #e5e7eb;
-  background-color: hsl(229, 91%, 9%);
+  padding: 6rem 2rem 4rem;
+  color: var(--paper);
+  background-color: var(--ink-950);
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.page *,
+.page *::before,
+.page *::after {
+  box-sizing: border-box;
+}
+
+/* Shared section label: small brass tick + uppercase word.
+   Used consistently above every section heading so the page reads
+   as one designed system rather than separate stacked blocks. */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brass);
+}
+
+/* .eyebrow::before {
+  content: "";
+  width: 1.1rem;
+  height: 1px;
+  background: var(--brass);
+} */
+
+.sectionHeader {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2.25rem;
+}
+
+.sectionHeader h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  margin: 0;
+  color: var(--paper);
+}
+
+/* HERO */
+.hero {
+  width: 100%;
+  max-width: 720px;
+  text-align: center;
+  margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* HERO */
-.hero {
-  text-align: center;
-  margin-bottom: 3rem;
+.hero .eyebrow {
+  margin-bottom: 1.25rem;
 }
 
 .title {
-  font-size: clamp(2rem, 8vw, 4rem);
-  font-weight: 800;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(2.4rem, 7vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.05;
+  margin: 0;
 }
 
 .subtitle {
-  margin-top: 1rem;
-  font-size: clamp(0.9rem, 3vw, 1rem);
-  color: #94a3b8;
-  line-height: 1.5;
+  margin-top: 1.25rem;
+  max-width: 46ch;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  color: var(--muted);
+  line-height: 1.6;
 }
 
-/* MIDDLE SECTION: Projects + Tech Stack */
-.middleSection {
+.heroCta {
   display: flex;
-  width: 100%;
-  max-width: 1200px;
-  gap: 2rem;
-  margin-bottom: 4rem;
-  align-items: flex-start;
-  box-sizing: border-box;
-}
-
-/* Projects (grid) */
-.projectsWrapper {
-  flex: 1 1 70%;
-}
-
-.projectsWrapper h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Make the project cards appear in rows of 2 and wrap */
-.projectsWrapper > * {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
+  margin-top: 2.25rem;
 }
 
-/* Tech Stack */
-.techWrapper {
-  flex: 0 1 25%;
-  min-width: 150px;
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.5rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease, background-color 0.15s ease;
 }
 
-.techWrapper h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+.primaryButton {
+  background: var(--brass);
+  color: var(--ink-950);
 }
 
-.techList {
+.primaryButton:hover {
+  background: var(--brass-bright);
+  transform: translateY(-1px);
+}
+
+.secondaryButton {
+  border: 1px solid var(--ink-700);
+  color: var(--paper);
+  background: transparent;
+}
+
+.secondaryButton:hover {
+  border-color: var(--brass);
+  color: var(--brass-bright);
+}
+
+.primaryButton:focus-visible,
+.secondaryButton:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 2px;
+}
+
+/* WORK */
+.workSection {
+  width: 100%;
+  max-width: 1100px;
+  margin-bottom: 5rem;
+}
+
+.projectsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.projectsGrid > * {
+  flex: 1 1 320px;
+  max-width: 420px;
+}
+
+/* ONBOARDING */
+.onboardingSection {
+  width: 100%;
+  max-width: 720px;
+  margin-bottom: 5rem;
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  list-style: none;
-  padding: 0;
+  gap: 0;
 }
 
-.techList li {
-  background: #020617;
-  border: 1px solid #1e293b;
-  padding: 0.5rem 0.75rem;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 0.9rem;
-  box-sizing: border-box;
+.step {
+  display: flex;
+  gap: 1.25rem;
+  padding-bottom: 2rem;
+  border-left: 1px solid var(--ink-800);
+  padding-left: 1.5rem;
+  margin-left: 0.9rem;
+  position: relative;
+}
+
+.step:last-child {
+  border-left-color: transparent;
+  padding-bottom: 0;
+}
+
+.stepNumber {
+  position: absolute;
+  left: -1.15rem;
+  top: 0;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  background: var(--ink-900);
+  border: 1px solid var(--brass);
+  color: var(--brass-bright);
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stepBody h3 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+  color: var(--paper);
+}
+
+.stepBody p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 /* CONTACT */
 .contactSection {
-  margin: 4rem 0 2rem;
+  width: 100%;
+  max-width: 560px;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
-.contactSection a {
-  color: #38bdf8;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.contactSection a:hover {
-  text-decoration: underline;
-  text-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
+.contactSection p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
 /* BACK BUTTON */
@@ -111,33 +252,36 @@
   margin-top: 2rem;
 }
 
-/* MOBILE */
-@media (max-width: 1024px) {
-  .middleSection {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .techWrapper {
-    flex: 1 1 100%;
-  }
-
-  .projectsWrapper {
-    flex: 1 1 100%;
+/* MOTION */
+@media (prefers-reduced-motion: reduce) {
+  .primaryButton,
+  .secondaryButton {
+    transition: none;
   }
 }
 
+/* MOBILE */
 @media (max-width: 768px) {
   .page {
-    padding: 3rem 1rem;
+    padding: 4rem 1.25rem 3rem;
   }
 
-  .projectsWrapper h2,
-  .techWrapper h2 {
-    font-size: 1.4rem;
+  .hero {
+    margin-bottom: 3.5rem;
   }
 
-  .techList li {
-    font-size: 0.85rem;
+  .heroCta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .workSection,
+  .onboardingSection {
+    margin-bottom: 3.5rem;
   }
 }
